@@ -45,5 +45,5 @@ app = Application.builder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(send_video))
-
+app.add_handler(CommandHandler("myid", myid))
 app.run_polling()

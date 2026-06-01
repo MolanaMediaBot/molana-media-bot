@@ -37,7 +37,10 @@ async def send_video(update: Update, context: ContextTypes.DEFAULT_TYPE):
         video=file_id,
         caption=title,
     )
-
+async def myid(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text(
+        f"Your ID: {update.effective_user.id}"
+    )
 app = Application.builder().token(TOKEN).build()
 
 app.add_handler(CommandHandler("start", start))
